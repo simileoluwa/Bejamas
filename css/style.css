@@ -1,0 +1,14 @@
+:root{
+    --bg-color: #ffffff;
+}
+
+body{
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: system-ui, sans-serif;
+font-weight: normal;
+}
+
+.container {
+    min-block-size: 25ch;
+    /* min-height: 100dvh; */
+  }
