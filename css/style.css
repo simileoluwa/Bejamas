@@ -1,14 +1,73 @@
 :root{
     --bg-color: #ffffff;
+    --hr-color: #E4E4E4;
+    --blackclr: #000;
+    --white-clr: #fff;
 }
 
 body{
     /* font-family: 'Poppins', sans-serif; */
     font-family: system-ui, sans-serif;
-font-weight: normal;
+    font-weight: normal;
 }
 
 .container {
-    min-block-size: 25ch;
     /* min-height: 100dvh; */
   }
+
+.wrapper{
+    min-block-size: 25ch;
+    inline-size: 100%;
+    max-inline-size: 1200px;
+    padding: 0 2rem;
+    margin-inline: auto;
+}
+
+.flex-boy{
+    display:flex;
+    justify-content: space-between;
+}
+
+.head-nav{
+    padding-block: 1.5em;
+    align-items: center;
+    border-bottom: 2px solid var(--hr-color);
+}
+
+.logo{
+    width: 150px;
+}
+
+.cart{
+    width: 48px;
+}
+
+.the-head{
+   padding-block: 1.5em 1em;
+}
+
+.add-to-cart-btn{
+    padding: .8em 1.5em;
+    color: var(--white-clr);
+    background-color: var(--blackclr);
+    text-transform: uppercase;
+}
+
+.banner-img{
+    position: relative;
+}
+
+.photo-of-the-day{
+    padding: .8em 1.5em;
+    color: var(--black-clr);
+    background-color: var(--white-clr);
+    position: absolute;
+    /* inset: 0 0; */
+    bottom: 0;
+    left: 0;
+    font-weight:600;
+}
+
+.content{
+    padding-block: 1.5em;
+}
