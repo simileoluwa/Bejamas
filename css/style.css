@@ -4,6 +4,8 @@
     --blackclr: #000;
     --white-clr: #fff;
     --content-clr: #656565;
+    --active-clr: #9B9B9B;
+    --btn-hover-clr: #dd4d5a;
 }
 
 body{
@@ -48,10 +50,15 @@ body{
 }
 
 .add-to-cart-btn{
-    padding: .8em 1.5em;
+    padding: .3em 1em;
     color: var(--white-clr);
     background-color: var(--blackclr);
     text-transform: uppercase;
+cursor: pointer;
+}
+
+.add-to-cart-btn:hover{
+    background-color:var(--btn-hover-clr);
 }
 
 .banner-img{
@@ -130,6 +137,116 @@ padding-block: 2em;
     padding-block: .3em;
 }
 
+.breadcrumb ul, .breadcrumb__sort ul {
+ list-style-type: none;  
+ display: flex;
+ padding: 0;
+ /* gap: .5em; */
+}
 
+.breadcrumb ul li::after{
+    content: '/';
+    margin: 0 .5em;
+}
 
+.breadcrumb ul li:last-child::after{
+    content: '';
+}
 
+.breadcrumb ul li.active a {
+    color:var(--active-clr);
+    text-decoration: none;
+}
+
+.breadcrumb__sort ul li::before{
+    content: '\21C5';
+    margin: 0 .5em;
+}
+
+.breadcrumb__sort ul li:last-child::before{
+    content: '';
+    margin: 0 .5em;
+}
+
+.breadcrumb__sort ul li:last-child::after{
+    content: '\21C5';
+    margin: 0 .5em;
+}
+
+.breadcrumb__sort ul li.active{
+    color:var(--active-clr);
+}
+
+.sales-content{
+    margin-block: 2em;
+    gap: 2em;
+    /* justify-content: space-between; */
+}
+
+.sales-content--nav{
+    width: 20%;
+}
+
+.sales-content--product{
+    width: 80%;
+    display: flex;
+    gap: 1.5em;
+    /* flex-wrap: wrap; */
+}
+
+.card-product{
+    /* width: 100%; */
+}
+
+.card_product ul{
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+    flex-wrap:wrap; 
+    /* box-sizing: border-box; */
+}
+
+.card_product--details li{
+    position: relative;
+    flex-basis:0 0 33.33333%;
+    margin-bottom: 2.5em;
+}
+
+.card_product--details li img{
+    max-width: 100%;
+    height: auto;
+}
+
+.card_product--details li span.best-seller{
+position: absolute;
+padding: .2em 1em;
+background-color: var(--white-clr);
+}
+
+.card_product--details li .card_product--add-to-cart{
+    position: absolute;
+    bottom: 4.6em;
+    width: 100%;
+    background-color:var(--blackclr);
+    color: var(--white-clr);
+    padding:.4em ;
+    z-index:2;
+    /* margin-bottom: 2em; */
+    font-weight: bold;
+    text-align: center;
+}
+
+ .card_product--details li .card_product--info{
+    position: relative;
+}
+
+.card_product--details li .card_product--cats{
+    color:var(--content-clr);
+    
+}
+
+.card_product--info .card_product--title{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
